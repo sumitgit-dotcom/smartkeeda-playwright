@@ -1,0 +1,22 @@
+{
+  "name": "smartkeeda-playwright",
+  "version": "1.0.0",
+  "description": "Playwright E2E framework for Smartkeeda testzone",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://testzone.smartkeeda.com/dashboard"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.10"
+  }
+}
