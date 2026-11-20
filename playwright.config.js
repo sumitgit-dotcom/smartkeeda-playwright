@@ -13,13 +13,14 @@ module.exports = defineConfig({
     ['list'],
   ],
 
-  use: {
+    use: {
     baseURL: process.env.BASE_URL || 'https://testzone.smartkeeda.com',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+    actionTimeout: 60000,       // Added: Wait up to 60s for actions like click/fill
+    navigationTimeout: 60000,   // Added: Wait up to 60s for page.goto
   },
-
   projects: [
     {
       name: 'chromium',
