@@ -21,7 +21,7 @@ module.exports = defineConfig({
     actionTimeout: 60000,       // Added: Wait up to 60s for actions like click/fill
     navigationTimeout: 60000,   // Added: Wait up to 60s for page.goto
   },
-  projects: [
+   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
@@ -33,6 +33,10 @@ module.exports = defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+    },
+    {
+      name: 'edge',
+      use: { ...devices['Desktop Edge'], channel: 'msedge' }, // Added Edge
     },
   ],
 });
