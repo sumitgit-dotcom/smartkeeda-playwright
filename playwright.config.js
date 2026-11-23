@@ -35,8 +35,14 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Safari'] },
     },
     {
-      name: 'edge',
-      use: { ...devices['Desktop Edge'], channel: 'msedge' }, // Added Edge
-    },
+  name: 'edge',
+  use: { 
+    ...devices['Desktop Edge'], 
+    channel: 'msedge',
+    launchOptions: {
+      args: ['--disable-features=msEdgeTrackingPrevention']
+    }
+  },
+},
   ],
 });
